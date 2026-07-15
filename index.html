@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+<div class="container">        
+    <div class="prompt-container">
+        <h2>Select Number of Games</h2>
+        <div class="examples">
+            <h3>Examples</h3>
+            <p>3 rounds: First to win 2 rounds wins the game!</p>
+            <p>5 rounds: First to win 3 rounds wins the game!</p>
+            <p>7 rounds: First to win 4 rounds wins the game!</p>
+            <input type="number" class="input-btn btnborder" id="input-btn" min="1" max="20">
+        </div>
+        
+    </div>
+    <div class="btn-container">
+        <button class="itm btnborder" id="rock">🪨</button>
+        <button class="itm btnborder" id="paper">📄</button>
+        <button class="itm btnborder" id="scissors">✂️</button>
+    </div>
+    <div class="score-container">
+        <h2>Final Score: Human 1 || Computer 2</h2>
+    </div>
+</div>
+    
+    <script src="rockpaperscissors.js"></script>
+</body>

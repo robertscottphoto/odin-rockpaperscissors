@@ -1,0 +1,95 @@
+:root {
+  --terra: rgb(171 65 59);
+  --beige: rgb(210 179 150);
+  --cream: rgb(255 241 217);
+  --sand: rgb(227 163 117);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background-color: var(--cream);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:focus, .itm:hover {
+    transition: 200ms;
+    outline: none;
+    border-color: var(--terra);
+    box-shadow: 0 0 5px var(--terra);
+}
+
+h1 {
+    text-align: center;
+    margin: 0px 20px;
+    padding: 10px 40px;
+}
+.container, .prompt-container, .examples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    padding: 10px;
+    margin: 10px;
+}
+
+.examples{
+    justify-content: center;
+    height: auto;
+}
+
+.input-btn {
+    height: auto;
+    width: 5ch;
+    padding: 10px;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+    appearance: unset;
+    border: 4px solid transparent;
+    color: var(--terra);
+}
+
+.input-btn:active {
+    outline: none;
+    border: none;
+    border: 4px solid transparent;
+}
+
+.btnborder {
+    font-size: 3em;
+    border: 4px solid var(--sand);
+    border-radius: 10px;
+}
+.itm {
+    height: 3em;
+    width:  3em;
+    background-color: var(--cream);
+    margin-bottom: 20px;
+}
+/*
+.prompt-container, 
+
+.btn-container, 
+.score-container 
+
+{
+    
+    display: none;
+    
+}
+    */

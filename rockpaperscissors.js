@@ -11,7 +11,7 @@ function getComputerInput(){
     }
 }
 function getHumanInput(){
-    let humanChoice = prompt("Rock, Paper, Scissors?");
+    //let humanChoice = prompt("Rock, Paper, Scissors?");
     return humanChoice.toLowerCase()
 }
 function playRound(humanInput, comInput){
