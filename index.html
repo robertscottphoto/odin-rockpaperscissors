@@ -9,8 +9,8 @@
 <body>
     <h1>Rock Paper Scissors</h1>
 <div class="container">        
-    <div class="prompt-container">
-        <h2>Select Number of Games</h2>
+    <div class="prompt-container" id="prompt-container">
+        <h2>Select Number of Rounds</h2>
         <div class="examples">
             <h3>Examples</h3>
             <p>3 rounds: First to win 2 rounds wins the game!</p>
@@ -26,7 +26,11 @@
         <button class="itm btnborder" id="scissors">✂️</button>
     </div>
     <div class="score-container">
-        <h2>Final Score: Human 1 || Computer 2</h2>
+        <h2 id="instruction" class="hide instruction">Select Rock, Paper or Scissors!</h2>
+        <h2>Rounds Remaining:<span id="rounds"></span></h2>
+        <h2>🔽 Final Score 🔽</h2>
+        <h2>Human <span id="humanTally">1</span> || Computer <span id="comTally">1</span> </h2>
+        <button id="replay-button" class="replay">Play Again?</button>
     </div>
 </div>
     

@@ -1,15 +1,14 @@
-const inputBtn = document.getElementById("input-btn");
+//Variables
+const inputBtn = document.getElementById("input-btn"); //Number input
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorBtn = document.getElementById("scissors");
+const promptContainer = document.getElementById("prompt-container")
+const instruction = document.getElementById("instruction")
+const replay = document.getElementById("replay-button")
+const rounds = document.getElementById("rounds")
 
-inputBtn.addEventListener("keypress", function(event){
-    if(event === " "){
-        alert("You pressed enter")
-
-    }
-    else{
-        alert("You didn't press enter")
-    }
-})
-
+//Functions
 function getComputerInput(){
     const com_choice = Math.random() * 100
     if(com_choice > 0 && com_choice < 33){
@@ -66,5 +65,34 @@ function playGame(){
     }
     console.log(`Computer: ${comScore} || Human: ${humanScore}`)  
 }
-playGame()
 
+function getNumberOfRoundsToWin(){
+    const roundTotal = inputBtn.value
+    const needToWin = Math.round((roundTotal / 2))
+    return needToWin
+}
+
+
+
+//Events
+inputBtn.addEventListener("keydown", function(event){
+    if(event.key == "Enter"){ //User clicks enter
+        if(inputBtn.value % 2 == 0){
+            alert("Please pick an odd number greater than 1")
+        }
+        
+        else if(inputBtn.value % 2 !== 0 && inputBtn.value > 1){
+            alert("valid")
+            inputBtn.setAttribute("disabled", true)
+            rounds.innerText = inputBtn.value
+        }
+        
+        else{
+            alert("Please pick an odd number greater than 1")
+        }
+    }
+})
+
+replay.addEventListener("click", function(event){
+    inputBtn.removeAttribute("disabled")
+})
