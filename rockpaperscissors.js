@@ -1,3 +1,15 @@
+const inputBtn = document.getElementById("input-btn");
+
+inputBtn.addEventListener("keypress", function(event){
+    if(event === " "){
+        alert("You pressed enter")
+
+    }
+    else{
+        alert("You didn't press enter")
+    }
+})
+
 function getComputerInput(){
     const com_choice = Math.random() * 100
     if(com_choice > 0 && com_choice < 33){
@@ -54,6 +66,5 @@ function playGame(){
     }
     console.log(`Computer: ${comScore} || Human: ${humanScore}`)  
 }
-
 playGame()
 
