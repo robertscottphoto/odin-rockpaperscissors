@@ -12,25 +12,25 @@
     <div class="prompt-container" id="prompt-container">
         <h2>Select Number of Rounds</h2>
         <div class="examples">
-            <h3>Examples</h3>
-            <p>3 rounds: First to win 2 rounds wins the game!</p>
-            <p>5 rounds: First to win 3 rounds wins the game!</p>
-            <p>7 rounds: First to win 4 rounds wins the game!</p>
             <input type="number" class="input-btn btnborder" id="input-btn" min="1" max="20">
+            <button id="go-btn" class="go-button">PLAY</button>
         </div>
         
     </div>
-    <div class="btn-container">
+    <div class="btn-container hide" id="item-container">
         <button class="itm btnborder" id="rock">🪨</button>
         <button class="itm btnborder" id="paper">📄</button>
         <button class="itm btnborder" id="scissors">✂️</button>
     </div>
     <div class="score-container">
         <h2 id="instruction" class="hide instruction">Select Rock, Paper or Scissors!</h2>
-        <h2>Rounds Remaining:<span id="rounds"></span></h2>
-        <h2>🔽 Final Score 🔽</h2>
-        <h2>Human <span id="humanTally">1</span> || Computer <span id="comTally">1</span> </h2>
-        <button id="replay-button" class="replay">Play Again?</button>
+        <h2 id="round-text" class="hide">Rounds Remaining: <span id="round-count"></span></h2>
+        <h1 id="announce-winner"></h1>
+        <h2 id="final-score-text" class="hide">Final Score</h2>
+        <div id="score-display" class="hide">
+            <p>Human: <span id="human-tally">0</span> | Computer: <span id="computer-tally">0</span> | Tie: <span id="tie-tally">0</span> </p>
+        </div>
+        <button id="replay-button" class="replay hide">Play Again?</button>
     </div>
 </div>
     
